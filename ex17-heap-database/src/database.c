@@ -141,7 +141,7 @@ void Database_set(struct Connection *conn, int id, const char *name, const char 
 }
 
 void Database_get(struct Connection *conn, int id) {
-    if (id < 0 || id > MAX_ROWS) {
+    if (id < 0 || id >= MAX_ROWS) {
         die("Error: Invalid id");
     }
 
@@ -155,7 +155,7 @@ void Database_get(struct Connection *conn, int id) {
 }
 
 void Database_delete(struct Connection *conn, int id) {
-    if (id < -1 || id > MAX_ROWS) {
+    if (id < -1 || id >= MAX_ROWS) {
         die("Error: Invalid id");
     }
 
