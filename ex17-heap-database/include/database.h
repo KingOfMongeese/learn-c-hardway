@@ -39,3 +39,13 @@ void Database_create(struct Connection *conn);
 
 // Write out a database to the `conn`
 void Database_write(struct Connection *conn);
+
+// Set `id` with `name` and `email`
+void Database_set(struct Connection *conn, int id, const char *name, const char *email);
+
+// print the value of the id
+void Database_get(struct Connection *conn, int id);
+
+// Deletes the database
+// if -1 then deletes the whole database
+void Database_delete(struct Connection *conn, int id);
